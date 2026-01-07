@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "numpy>=2.3.2",
     "pandas>=2.3.2",
+    "werpy>=3.1.0",
 ]
 authors = [
     {name = "Antonio", email = "antonionmoreira@gmail.com"}

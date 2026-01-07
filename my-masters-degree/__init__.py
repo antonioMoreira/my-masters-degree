@@ -10,3 +10,4 @@ try:
 except (ImportError, PackageNotFoundError):
     # Fallback for development mode or when package is not installed
     __version__ = "0.1.0-dev"
+
