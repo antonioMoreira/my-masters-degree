@@ -1,3 +1,4 @@
+from enum import Enum
 import re
 import os
 import difflib
@@ -29,6 +30,67 @@ class Section(BaseModel):
 
 class InterviewSegmentation(BaseModel):
     segments: List[Section]
+
+
+class ClassLabel(str, Enum):
+    INTRODUCAO = "INTRODUÇÃO"
+    IDENTIFICACAO = "IDENTIFICAÇÃO"
+    INFANCIA = "INFÂNCIA"
+    FAMILIA = "FAMÍLIA"
+    ESCOLA = "ESCOLA"
+    JUVENTUDE = "JUVENTUDE"
+    DESENVOLVIMENTO = "DESENVOLVIMENTO"
+    TRABALHO_COMERCIO = "TRABALHO/ COMÉRCIO"
+    FINALIZACAO = "FINALIZAÇÃO"
+
+
+def classify_questions(
+    questions_parsed: InterviewSegmentation,
+    inter_questions: pd.DataFrame,
+    level: str | None = None,
+) -> pd.DataFrame:
+    """
+    Attach classification columns to the questions DataFrame.
+
+    Parameters
+    ----------
+    questions_parsed : InterviewSegmentation
+        Parsed segmentation object.
+    inter_questions : pd.DataFrame
+        DataFrame with questions; its index must correspond to the parsed IDs.
+    level : str | None, optional
+        If "section", only adds a 'section' column.
+        If "subsection", only adds a 'subsection' column.
+        If None (default), adds both.
+
+    Returns
+    -------
+    pd.DataFrame
+        Copy of inter_questions with classification columns.
+    """
+    if level not in {"section", "subsection", None}:
+        raise ValueError("level must be 'section', 'subsection', or None")
+
+    id2cls: dict[int, tuple[ClassLabel, ClassLabel, str]] = {}
+    for seg in questions_parsed.segments:
+        for sub in seg.subsections:
+            for item in sub.items:
+                id2cls[item.id] = (
+                    ClassLabel(seg.title),
+                    ClassLabel(sub.subtitle),
+                    item.timestamp,
+                )
+
+    missing = set(inter_questions.index) - set(id2cls.keys())
+    if missing:
+        raise ValueError(f"Unclassified question ids: {sorted(missing)}")
+
+    df = inter_questions.copy()
+    if level in (None, "section"):
+        df["section"] = df.index.map(lambda i: id2cls[i][0])
+    if level in (None, "subsection"):
+        df["subsection"] = df.index.map(lambda i: id2cls[i][1])
+    return df
 
 
 def split_interview_questions(questions:str) -> InterviewSegmentation | None:
