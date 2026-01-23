@@ -93,7 +93,14 @@ def classify_questions(
     return df
 
 
-def split_interview_questions(questions:str) -> InterviewSegmentation | None:
+def split_interview_questions(sample_df: pd.DataFrame, interview_code:str) -> InterviewSegmentation | None:
+    questions_list = []
+    questions_df = sample_df[sample_df["speaker_code"] == interview_code][["original_text", "start_time"]]
+
+    assert not questions_df.empty, f"No questions found for interview_code={interview_code}"
+
+    for row in questions_df.itertuples():
+        questions_list.append(f"{row.Index} - {int(row.start_time//60):02d}:{int(row.start_time%60):02d} - {row.original_text}")
     
     #TODO should move the content locally?
     with open("./roteiro_entrevista.md", "r") as f:
@@ -113,7 +120,7 @@ def split_interview_questions(questions:str) -> InterviewSegmentation | None:
     {roteiro_entrevista_md}
 
     TRANSCRIÇÃO PARA SEGMENTAR:
-    {questions}
+    {"\n".join(questions_list)}
     """
 
     client = genai.Client(
