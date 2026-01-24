@@ -173,28 +173,40 @@ def split_interview_questions(sample_df: pd.DataFrame, interview_code:str) -> In
         return None
     
 
-def aggregate_sample_dialogues(mupe_df: pd.DataFrame, audio_id: int) -> tuple[pd.DataFrame, list[int]]:
+def aggregate_sample_dialogues(mupe_df: pd.DataFrame, audio_id: int) -> tuple[pd.DataFrame, list[int], str]:
     """
     Aggregate contiguous utterances for a given audio_id and detect missing file counters.
 
     Returns
     -------
-    tuple[pd.DataFrame, list[int]]
+    tuple[pd.DataFrame, list[int], str]
         - Aggregated blocks with merged interviewer turns.
         - Sorted list of missing file_id counters.
+        - The joined interviewer speaker_code.
     """
     sample = mupe_df.loc[mupe_df["audio_id"] == audio_id].sort_values("start_time").copy()
+
     if sample.empty:
         raise ValueError(f"No rows found for audio_id={audio_id}")
 
     speaker_counts = sample["speaker_code"].value_counts()
-    if len(speaker_counts) > 1:
+    if len(speaker_counts) > 2:
         interviewer_codes = speaker_counts.index[1:]
-        join_code = "_".join(interviewer_codes)
+        join_code:str = "_".join(interviewer_codes)
+        print(f"Joining interviewer codes {interviewer_codes} into '{join_code}'")
         sample.loc[sample["speaker_code"].isin(interviewer_codes), "speaker_code"] = join_code
+    else:
+        join_code:str = speaker_counts.index[-1]
 
     block_id = (sample["speaker_code"] != sample["speaker_code"].shift()).cumsum()
-    file_id_series = sample["file_path"].str.extract(r"pc_ma_hv064_(?P<file_id>\d+)_")["file_id"].astype(int)
+    
+    file_path_extract = sample["file_path"].str.extract(
+        r"pc_ma_(?P<mupe_code>hv\d{3})_(?P<file_id>\d+)_")
+    
+    assert all(file_path_extract['mupe_code'] == file_path_extract['mupe_code'].iloc[0]), \
+        "Multiple mupe_code values found in the sample."
+    
+    file_id_series = file_path_extract["file_id"].astype(int)
 
     df_agg = (
         sample.assign(block_id=block_id, file_id=file_id_series)
@@ -212,9 +224,9 @@ def aggregate_sample_dialogues(mupe_df: pd.DataFrame, audio_id: int) -> tuple[pd
     )
 
     if file_id_series.empty:
-        return df_agg, []
+        return df_agg, [], join_code
 
     file_ids = file_id_series.to_numpy(dtype=int)
     expected = set(range(file_ids.min(), file_ids.max() + 1))
     missing_ids = sorted(expected.difference(file_ids))
-    return df_agg, missing_ids
+    return df_agg, missing_ids, join_code
