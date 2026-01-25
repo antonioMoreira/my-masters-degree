@@ -1,0 +1,164 @@
+{
+  "segments": [
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 1,
+              "timestamp": "07:23"
+            },
+            {
+              "id": 3,
+              "timestamp": "08:38"
+            },
+            {
+              "id": 5,
+              "timestamp": "09:14"
+            },
+            {
+              "id": 7,
+              "timestamp": "10:48"
+            },
+            {
+              "id": 9,
+              "timestamp": "11:00"
+            },
+            {
+              "id": 11,
+              "timestamp": "16:16"
+            },
+            {
+              "id": 13,
+              "timestamp": "18:13"
+            },
+            {
+              "id": 15,
+              "timestamp": "18:15"
+            },
+            {
+              "id": 17,
+              "timestamp": "18:18"
+            },
+            {
+              "id": 19,
+              "timestamp": "18:36"
+            },
+            {
+              "id": 21,
+              "timestamp": "19:29"
+            },
+            {
+              "id": 23,
+              "timestamp": "21:22"
+            },
+            {
+              "id": 25,
+              "timestamp": "24:04"
+            },
+            {
+              "id": 27,
+              "timestamp": "26:33"
+            },
+            {
+              "id": 29,
+              "timestamp": "29:39"
+            },
+            {
+              "id": 31,
+              "timestamp": "29:50"
+            },
+            {
+              "id": 33,
+              "timestamp": "30:13"
+            },
+            {
+              "id": 35,
+              "timestamp": "30:56"
+            },
+            {
+              "id": 37,
+              "timestamp": "31:13"
+            },
+            {
+              "id": 39,
+              "timestamp": "31:26"
+            },
+            {
+              "id": 41,
+              "timestamp": "35:29"
+            },
+            {
+              "id": 43,
+              "timestamp": "37:23"
+            },
+            {
+              "id": 45,
+              "timestamp": "40:58"
+            },
+            {
+              "id": 47,
+              "timestamp": "45:05"
+            },
+            {
+              "id": 49,
+              "timestamp": "45:17"
+            },
+            {
+              "id": 51,
+              "timestamp": "46:12"
+            },
+            {
+              "id": 53,
+              "timestamp": "46:48"
+            },
+            {
+              "id": 55,
+              "timestamp": "46:57"
+            },
+            {
+              "id": 57,
+              "timestamp": "47:12"
+            },
+            {
+              "id": 59,
+              "timestamp": "48:25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "CONSIDERAÇÕES FINAIS",
+          "items": [
+            {
+              "id": 61,
+              "timestamp": "50:51"
+            },
+            {
+              "id": 63,
+              "timestamp": "52:01"
+            },
+            {
+              "id": 65,
+              "timestamp": "52:06"
+            },
+            {
+              "id": 67,
+              "timestamp": "52:24"
+            },
+            {
+              "id": 69,
+              "timestamp": "53:06"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

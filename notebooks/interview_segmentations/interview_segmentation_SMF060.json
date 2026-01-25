@@ -1,0 +1,129 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "IDENTIFICAÇÃO",
+          "items": [
+            {
+              "id": 0,
+              "timestamp": "00:12"
+            },
+            {
+              "id": 2,
+              "timestamp": "02:35"
+            },
+            {
+              "id": 4,
+              "timestamp": "04:04"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 6,
+              "timestamp": "04:32"
+            },
+            {
+              "id": 8,
+              "timestamp": "06:53"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 10,
+              "timestamp": "10:07"
+            },
+            {
+              "id": 12,
+              "timestamp": "14:20"
+            },
+            {
+              "id": 14,
+              "timestamp": "17:30"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 16,
+              "timestamp": "22:20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 18,
+              "timestamp": "29:08"
+            },
+            {
+              "id": 20,
+              "timestamp": "34:16"
+            },
+            {
+              "id": 22,
+              "timestamp": "45:35"
+            },
+            {
+              "id": 24,
+              "timestamp": "64:13"
+            },
+            {
+              "id": 26,
+              "timestamp": "64:27"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "FINALIZAÇÃO",
+          "items": [
+            {
+              "id": 28,
+              "timestamp": "74:55"
+            },
+            {
+              "id": 30,
+              "timestamp": "82:10"
+            },
+            {
+              "id": 32,
+              "timestamp": "82:43"
+            },
+            {
+              "id": 34,
+              "timestamp": "89:31"
+            },
+            {
+              "id": 36,
+              "timestamp": "91:01"
+            },
+            {
+              "id": 38,
+              "timestamp": "91:11"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "IDENTIFICAÇÃO",
+          "items": [
+            {
+              "id": 0,
+              "timestamp": "00:33"
+            },
+            {
+              "id": 6,
+              "timestamp": "02:54"
+            }
+          ]
+        },
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 2,
+              "timestamp": "01:24"
+            },
+            {
+              "id": 4,
+              "timestamp": "01:53"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 8,
+              "timestamp": "04:28"
+            },
+            {
+              "id": 10,
+              "timestamp": "04:37"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 12,
+              "timestamp": "06:18"
+            },
+            {
+              "id": 14,
+              "timestamp": "06:31"
+            },
+            {
+              "id": 16,
+              "timestamp": "07:24"
+            },
+            {
+              "id": 18,
+              "timestamp": "10:11"
+            },
+            {
+              "id": 20,
+              "timestamp": "13:12"
+            },
+            {
+              "id": 22,
+              "timestamp": "13:25"
+            },
+            {
+              "id": 54,
+              "timestamp": "31:01"
+            },
+            {
+              "id": 60,
+              "timestamp": "35:28"
+            },
+            {
+              "id": 62,
+              "timestamp": "37:22"
+            },
+            {
+              "id": 64,
+              "timestamp": "37:26"
+            },
+            {
+              "id": 66,
+              "timestamp": "38:50"
+            },
+            {
+              "id": 68,
+              "timestamp": "40:04"
+            },
+            {
+              "id": 70,
+              "timestamp": "42:16"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 24,
+              "timestamp": "15:55"
+            },
+            {
+              "id": 26,
+              "timestamp": "16:02"
+            },
+            {
+              "id": 28,
+              "timestamp": "16:57"
+            },
+            {
+              "id": 30,
+              "timestamp": "17:51"
+            },
+            {
+              "id": 32,
+              "timestamp": "18:04"
+            },
+            {
+              "id": 34,
+              "timestamp": "20:33"
+            },
+            {
+              "id": 36,
+              "timestamp": "20:52"
+            },
+            {
+              "id": 38,
+              "timestamp": "20:59"
+            },
+            {
+              "id": 40,
+              "timestamp": "22:48"
+            },
+            {
+              "id": 42,
+              "timestamp": "23:04"
+            },
+            {
+              "id": 44,
+              "timestamp": "25:20"
+            },
+            {
+              "id": 72,
+              "timestamp": "42:33"
+            },
+            {
+              "id": 74,
+              "timestamp": "44:00"
+            },
+            {
+              "id": 76,
+              "timestamp": "45:05"
+            },
+            {
+              "id": 78,
+              "timestamp": "46:12"
+            },
+            {
+              "id": 80,
+              "timestamp": "47:38"
+            },
+            {
+              "id": 82,
+              "timestamp": "48:53"
+            },
+            {
+              "id": 84,
+              "timestamp": "49:27"
+            },
+            {
+              "id": 86,
+              "timestamp": "49:38"
+            },
+            {
+              "id": 88,
+              "timestamp": "50:16"
+            },
+            {
+              "id": 90,
+              "timestamp": "50:57"
+            },
+            {
+              "id": 92,
+              "timestamp": "51:37"
+            },
+            {
+              "id": 94,
+              "timestamp": "52:49"
+            },
+            {
+              "id": 96,
+              "timestamp": "52:51"
+            },
+            {
+              "id": 102,
+              "timestamp": "58:56"
+            },
+            {
+              "id": 104,
+              "timestamp": "61:08"
+            },
+            {
+              "id": 106,
+              "timestamp": "62:09"
+            },
+            {
+              "id": 108,
+              "timestamp": "62:13"
+            },
+            {
+              "id": 110,
+              "timestamp": "62:17"
+            },
+            {
+              "id": 112,
+              "timestamp": "62:37"
+            },
+            {
+              "id": 114,
+              "timestamp": "62:46"
+            },
+            {
+              "id": 116,
+              "timestamp": "63:11"
+            },
+            {
+              "id": 118,
+              "timestamp": "63:16"
+            },
+            {
+              "id": 120,
+              "timestamp": "63:38"
+            },
+            {
+              "id": 122,
+              "timestamp": "64:33"
+            },
+            {
+              "id": 124,
+              "timestamp": "67:19"
+            },
+            {
+              "id": 126,
+              "timestamp": "69:29"
+            },
+            {
+              "id": 128,
+              "timestamp": "69:43"
+            },
+            {
+              "id": 130,
+              "timestamp": "69:54"
+            },
+            {
+              "id": 132,
+              "timestamp": "70:47"
+            },
+            {
+              "id": 134,
+              "timestamp": "71:09"
+            },
+            {
+              "id": 136,
+              "timestamp": "71:19"
+            },
+            {
+              "id": 138,
+              "timestamp": "71:27"
+            },
+            {
+              "id": 140,
+              "timestamp": "71:30"
+            },
+            {
+              "id": 142,
+              "timestamp": "76:25"
+            },
+            {
+              "id": 144,
+              "timestamp": "76:29"
+            },
+            {
+              "id": 146,
+              "timestamp": "76:33"
+            },
+            {
+              "id": 148,
+              "timestamp": "77:00"
+            },
+            {
+              "id": 150,
+              "timestamp": "78:19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 46,
+              "timestamp": "26:02"
+            },
+            {
+              "id": 48,
+              "timestamp": "28:10"
+            },
+            {
+              "id": 50,
+              "timestamp": "29:13"
+            },
+            {
+              "id": 52,
+              "timestamp": "29:16"
+            },
+            {
+              "id": 56,
+              "timestamp": "31:08"
+            },
+            {
+              "id": 58,
+              "timestamp": "32:19"
+            },
+            {
+              "id": 98,
+              "timestamp": "53:49"
+            },
+            {
+              "id": 100,
+              "timestamp": "53:55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "CONSIDERAÇÕES FINAIS",
+          "items": [
+            {
+              "id": 152,
+              "timestamp": "80:13"
+            },
+            {
+              "id": 154,
+              "timestamp": "80:37"
+            },
+            {
+              "id": 156,
+              "timestamp": "81:34"
+            },
+            {
+              "id": 158,
+              "timestamp": "82:09"
+            },
+            {
+              "id": 160,
+              "timestamp": "82:22"
+            },
+            {
+              "id": 162,
+              "timestamp": "83:44"
+            },
+            {
+              "id": 164,
+              "timestamp": "83:52"
+            },
+            {
+              "id": 166,
+              "timestamp": "85:08"
+            },
+            {
+              "id": 168,
+              "timestamp": "85:37"
+            },
+            {
+              "id": 170,
+              "timestamp": "85:42"
+            },
+            {
+              "id": 172,
+              "timestamp": "86:54"
+            },
+            {
+              "id": 174,
+              "timestamp": "87:45"
+            },
+            {
+              "id": 176,
+              "timestamp": "87:49"
+            },
+            {
+              "id": 178,
+              "timestamp": "88:34"
+            },
+            {
+              "id": 180,
+              "timestamp": "91:12"
+            },
+            {
+              "id": 182,
+              "timestamp": "92:14"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "IDENTIFICAÇÃO",
+          "items": [
+            {
+              "id": 1,
+              "timestamp": "00:48"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 3,
+              "timestamp": "33:24"
+            },
+            {
+              "id": 5,
+              "timestamp": "38:15"
+            },
+            {
+              "id": 31,
+              "timestamp": "82:01"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 7,
+              "timestamp": "39:37"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 9,
+              "timestamp": "40:20"
+            },
+            {
+              "id": 11,
+              "timestamp": "46:11"
+            },
+            {
+              "id": 13,
+              "timestamp": "52:24"
+            },
+            {
+              "id": 15,
+              "timestamp": "53:57"
+            },
+            {
+              "id": 17,
+              "timestamp": "58:17"
+            },
+            {
+              "id": 19,
+              "timestamp": "58:22"
+            },
+            {
+              "id": 25,
+              "timestamp": "66:46"
+            },
+            {
+              "id": 27,
+              "timestamp": "72:19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "FINALIZAÇÃO",
+          "items": [
+            {
+              "id": 21,
+              "timestamp": "60:46"
+            },
+            {
+              "id": 23,
+              "timestamp": "62:59"
+            },
+            {
+              "id": 29,
+              "timestamp": "72:35"
+            },
+            {
+              "id": 33,
+              "timestamp": "84:44"
+            },
+            {
+              "id": 35,
+              "timestamp": "85:54"
+            },
+            {
+              "id": 37,
+              "timestamp": "88:26"
+            },
+            {
+              "id": 39,
+              "timestamp": "89:56"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

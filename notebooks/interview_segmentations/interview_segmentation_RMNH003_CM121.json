@@ -1,0 +1,198 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "IDENTIFICAÇÃO",
+          "items": [
+            {
+              "id": 0,
+              "timestamp": "00:00"
+            }
+          ]
+        },
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 2,
+              "timestamp": "00:24"
+            },
+            {
+              "id": 4,
+              "timestamp": "02:20"
+            },
+            {
+              "id": 6,
+              "timestamp": "02:55"
+            },
+            {
+              "id": 8,
+              "timestamp": "02:58"
+            },
+            {
+              "id": 10,
+              "timestamp": "04:09"
+            },
+            {
+              "id": 12,
+              "timestamp": "04:29"
+            },
+            {
+              "id": 14,
+              "timestamp": "05:04"
+            },
+            {
+              "id": 16,
+              "timestamp": "05:49"
+            },
+            {
+              "id": 18,
+              "timestamp": "05:55"
+            },
+            {
+              "id": 20,
+              "timestamp": "06:00"
+            },
+            {
+              "id": 22,
+              "timestamp": "08:29"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 24,
+              "timestamp": "08:34"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 26,
+              "timestamp": "09:18"
+            },
+            {
+              "id": 28,
+              "timestamp": "10:11"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 30,
+              "timestamp": "10:31"
+            },
+            {
+              "id": 32,
+              "timestamp": "10:38"
+            },
+            {
+              "id": 34,
+              "timestamp": "11:29"
+            },
+            {
+              "id": 36,
+              "timestamp": "12:56"
+            },
+            {
+              "id": 38,
+              "timestamp": "14:20"
+            },
+            {
+              "id": 40,
+              "timestamp": "15:40"
+            }
+          ]
+        },
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 42,
+              "timestamp": "16:44"
+            },
+            {
+              "id": 44,
+              "timestamp": "17:34"
+            },
+            {
+              "id": 46,
+              "timestamp": "17:50"
+            },
+            {
+              "id": 48,
+              "timestamp": "18:01"
+            },
+            {
+              "id": 50,
+              "timestamp": "19:02"
+            },
+            {
+              "id": 52,
+              "timestamp": "19:46"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 54,
+              "timestamp": "22:51"
+            },
+            {
+              "id": 56,
+              "timestamp": "41:17"
+            },
+            {
+              "id": 58,
+              "timestamp": "43:46"
+            },
+            {
+              "id": 60,
+              "timestamp": "45:35"
+            },
+            {
+              "id": 62,
+              "timestamp": "64:22"
+            },
+            {
+              "id": 64,
+              "timestamp": "64:29"
+            },
+            {
+              "id": 66,
+              "timestamp": "64:37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "FINALIZAÇÃO",
+          "items": [
+            {
+              "id": 68,
+              "timestamp": "92:31"
+            },
+            {
+              "id": 70,
+              "timestamp": "100:29"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

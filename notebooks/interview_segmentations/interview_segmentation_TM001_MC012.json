@@ -1,0 +1,279 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 1,
+              "timestamp": "01:56"
+            },
+            {
+              "id": 3,
+              "timestamp": "09:13"
+            },
+            {
+              "id": 5,
+              "timestamp": "10:09"
+            },
+            {
+              "id": 7,
+              "timestamp": "19:29"
+            },
+            {
+              "id": 9,
+              "timestamp": "39:46"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 11,
+              "timestamp": "46:02"
+            },
+            {
+              "id": 15,
+              "timestamp": "51:45"
+            },
+            {
+              "id": 17,
+              "timestamp": "52:58"
+            },
+            {
+              "id": 19,
+              "timestamp": "59:08"
+            },
+            {
+              "id": 21,
+              "timestamp": "59:20"
+            },
+            {
+              "id": 23,
+              "timestamp": "59:34"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 13,
+              "timestamp": "49:09"
+            },
+            {
+              "id": 25,
+              "timestamp": "68:30"
+            },
+            {
+              "id": 27,
+              "timestamp": "68:55"
+            },
+            {
+              "id": 29,
+              "timestamp": "69:03"
+            },
+            {
+              "id": 31,
+              "timestamp": "69:39"
+            },
+            {
+              "id": 33,
+              "timestamp": "69:53"
+            },
+            {
+              "id": 35,
+              "timestamp": "72:55"
+            },
+            {
+              "id": 37,
+              "timestamp": "73:10"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 39,
+              "timestamp": "79:34"
+            },
+            {
+              "id": 41,
+              "timestamp": "97:25"
+            },
+            {
+              "id": 43,
+              "timestamp": "97:42"
+            },
+            {
+              "id": 45,
+              "timestamp": "107:55"
+            },
+            {
+              "id": 47,
+              "timestamp": "108:58"
+            },
+            {
+              "id": 49,
+              "timestamp": "109:09"
+            },
+            {
+              "id": 52,
+              "timestamp": "119:14"
+            },
+            {
+              "id": 54,
+              "timestamp": "119:19"
+            },
+            {
+              "id": 56,
+              "timestamp": "119:30"
+            },
+            {
+              "id": 58,
+              "timestamp": "120:31"
+            },
+            {
+              "id": 60,
+              "timestamp": "126:17"
+            },
+            {
+              "id": 62,
+              "timestamp": "126:31"
+            },
+            {
+              "id": 64,
+              "timestamp": "128:17"
+            },
+            {
+              "id": 66,
+              "timestamp": "128:28"
+            },
+            {
+              "id": 68,
+              "timestamp": "129:30"
+            },
+            {
+              "id": 70,
+              "timestamp": "130:43"
+            },
+            {
+              "id": 72,
+              "timestamp": "131:13"
+            },
+            {
+              "id": 74,
+              "timestamp": "134:33"
+            },
+            {
+              "id": 76,
+              "timestamp": "134:57"
+            },
+            {
+              "id": 78,
+              "timestamp": "151:12"
+            },
+            {
+              "id": 80,
+              "timestamp": "152:56"
+            },
+            {
+              "id": 82,
+              "timestamp": "153:13"
+            },
+            {
+              "id": 84,
+              "timestamp": "153:20"
+            },
+            {
+              "id": 86,
+              "timestamp": "153:55"
+            },
+            {
+              "id": 88,
+              "timestamp": "155:07"
+            },
+            {
+              "id": 90,
+              "timestamp": "179:24"
+            },
+            {
+              "id": 92,
+              "timestamp": "179:33"
+            },
+            {
+              "id": 94,
+              "timestamp": "180:09"
+            },
+            {
+              "id": 96,
+              "timestamp": "184:20"
+            },
+            {
+              "id": 98,
+              "timestamp": "200:35"
+            },
+            {
+              "id": 100,
+              "timestamp": "201:15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "CONSIDERAÇÕES FINAIS",
+          "items": [
+            {
+              "id": 102,
+              "timestamp": "204:56"
+            },
+            {
+              "id": 104,
+              "timestamp": "205:02"
+            },
+            {
+              "id": 111,
+              "timestamp": "211:58"
+            },
+            {
+              "id": 113,
+              "timestamp": "212:16"
+            },
+            {
+              "id": 115,
+              "timestamp": "214:24"
+            },
+            {
+              "id": 117,
+              "timestamp": "217:22"
+            },
+            {
+              "id": 119,
+              "timestamp": "217:43"
+            },
+            {
+              "id": 121,
+              "timestamp": "225:09"
+            },
+            {
+              "id": 123,
+              "timestamp": "225:49"
+            },
+            {
+              "id": 126,
+              "timestamp": "226:53"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "IDENTIFICAÇÃO",
+          "items": [
+            {
+              "id": 18,
+              "timestamp": "17:58"
+            },
+            {
+              "id": 20,
+              "timestamp": "18:03"
+            },
+            {
+              "id": 22,
+              "timestamp": "18:05"
+            },
+            {
+              "id": 24,
+              "timestamp": "18:25"
+            }
+          ]
+        },
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 0,
+              "timestamp": "00:52"
+            },
+            {
+              "id": 2,
+              "timestamp": "10:42"
+            },
+            {
+              "id": 4,
+              "timestamp": "12:28"
+            },
+            {
+              "id": 6,
+              "timestamp": "12:39"
+            },
+            {
+              "id": 8,
+              "timestamp": "12:57"
+            },
+            {
+              "id": 10,
+              "timestamp": "14:06"
+            },
+            {
+              "id": 12,
+              "timestamp": "15:27"
+            },
+            {
+              "id": 14,
+              "timestamp": "15:39"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 26,
+              "timestamp": "20:25"
+            },
+            {
+              "id": 28,
+              "timestamp": "22:47"
+            },
+            {
+              "id": 30,
+              "timestamp": "23:13"
+            },
+            {
+              "id": 32,
+              "timestamp": "23:18"
+            },
+            {
+              "id": 34,
+              "timestamp": "24:12"
+            },
+            {
+              "id": 36,
+              "timestamp": "24:32"
+            },
+            {
+              "id": 38,
+              "timestamp": "24:47"
+            },
+            {
+              "id": 40,
+              "timestamp": "25:51"
+            },
+            {
+              "id": 42,
+              "timestamp": "27:42"
+            },
+            {
+              "id": 44,
+              "timestamp": "28:32"
+            },
+            {
+              "id": 46,
+              "timestamp": "28:49"
+            },
+            {
+              "id": 48,
+              "timestamp": "29:06"
+            },
+            {
+              "id": 50,
+              "timestamp": "31:39"
+            },
+            {
+              "id": 52,
+              "timestamp": "32:32"
+            },
+            {
+              "id": 54,
+              "timestamp": "34:41"
+            },
+            {
+              "id": 56,
+              "timestamp": "35:45"
+            },
+            {
+              "id": 58,
+              "timestamp": "36:16"
+            },
+            {
+              "id": 60,
+              "timestamp": "38:01"
+            },
+            {
+              "id": 62,
+              "timestamp": "38:59"
+            },
+            {
+              "id": 64,
+              "timestamp": "39:03"
+            },
+            {
+              "id": 66,
+              "timestamp": "39:06"
+            },
+            {
+              "id": 68,
+              "timestamp": "40:54"
+            },
+            {
+              "id": 70,
+              "timestamp": "43:55"
+            },
+            {
+              "id": 72,
+              "timestamp": "44:02"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 94,
+              "timestamp": "79:02"
+            },
+            {
+              "id": 96,
+              "timestamp": "82:34"
+            },
+            {
+              "id": 98,
+              "timestamp": "82:50"
+            },
+            {
+              "id": 100,
+              "timestamp": "83:40"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 102,
+              "timestamp": "86:30"
+            },
+            {
+              "id": 104,
+              "timestamp": "87:43"
+            },
+            {
+              "id": 106,
+              "timestamp": "88:27"
+            },
+            {
+              "id": 108,
+              "timestamp": "88:48"
+            },
+            {
+              "id": 110,
+              "timestamp": "89:50"
+            },
+            {
+              "id": 112,
+              "timestamp": "91:53"
+            },
+            {
+              "id": 114,
+              "timestamp": "93:16"
+            },
+            {
+              "id": 116,
+              "timestamp": "94:23"
+            },
+            {
+              "id": 118,
+              "timestamp": "96:02"
+            },
+            {
+              "id": 120,
+              "timestamp": "97:07"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 74,
+              "timestamp": "54:35"
+            },
+            {
+              "id": 76,
+              "timestamp": "59:48"
+            },
+            {
+              "id": 78,
+              "timestamp": "59:53"
+            },
+            {
+              "id": 80,
+              "timestamp": "59:58"
+            },
+            {
+              "id": 82,
+              "timestamp": "60:26"
+            },
+            {
+              "id": 84,
+              "timestamp": "69:34"
+            },
+            {
+              "id": 86,
+              "timestamp": "72:35"
+            },
+            {
+              "id": 88,
+              "timestamp": "73:09"
+            },
+            {
+              "id": 90,
+              "timestamp": "77:16"
+            },
+            {
+              "id": 92,
+              "timestamp": "78:46"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "CONSIDERAÇÕES FINAIS",
+          "items": [
+            {
+              "id": 122,
+              "timestamp": "101:00"
+            },
+            {
+              "id": 124,
+              "timestamp": "101:17"
+            },
+            {
+              "id": 126,
+              "timestamp": "102:37"
+            },
+            {
+              "id": 128,
+              "timestamp": "102:50"
+            },
+            {
+              "id": 130,
+              "timestamp": "105:35"
+            },
+            {
+              "id": 132,
+              "timestamp": "107:20"
+            },
+            {
+              "id": 134,
+              "timestamp": "108:25"
+            },
+            {
+              "id": 136,
+              "timestamp": "109:12"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

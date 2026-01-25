@@ -1,0 +1,84 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "IDENTIFICAÇÃO",
+          "items": [
+            {
+              "id": 1,
+              "timestamp": "00:13"
+            },
+            {
+              "id": 3,
+              "timestamp": "00:25"
+            },
+            {
+              "id": 5,
+              "timestamp": "00:28"
+            }
+          ]
+        },
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 7,
+              "timestamp": "05:02"
+            },
+            {
+              "id": 9,
+              "timestamp": "08:06"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 13,
+              "timestamp": "93:23"
+            },
+            {
+              "id": 15,
+              "timestamp": "100:56"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 17,
+              "timestamp": "102:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "CONSIDERAÇÕES FINAIS",
+          "items": [
+            {
+              "id": 19,
+              "timestamp": "140:38"
+            },
+            {
+              "id": 21,
+              "timestamp": "179:38"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

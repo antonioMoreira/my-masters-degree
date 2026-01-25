@@ -1,0 +1,210 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "IDENTIFICAÇÃO",
+          "items": [
+            {
+              "id": 0,
+              "timestamp": "00:47"
+            },
+            {
+              "id": 2,
+              "timestamp": "01:36"
+            },
+            {
+              "id": 8,
+              "timestamp": "05:58"
+            }
+          ]
+        },
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 4,
+              "timestamp": "02:36"
+            },
+            {
+              "id": 6,
+              "timestamp": "03:31"
+            },
+            {
+              "id": 10,
+              "timestamp": "07:21"
+            },
+            {
+              "id": 42,
+              "timestamp": "37:20"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 12,
+              "timestamp": "11:03"
+            },
+            {
+              "id": 14,
+              "timestamp": "11:31"
+            },
+            {
+              "id": 16,
+              "timestamp": "13:30"
+            },
+            {
+              "id": 18,
+              "timestamp": "13:46"
+            },
+            {
+              "id": 20,
+              "timestamp": "16:00"
+            },
+            {
+              "id": 22,
+              "timestamp": "17:45"
+            },
+            {
+              "id": 24,
+              "timestamp": "18:47"
+            },
+            {
+              "id": 26,
+              "timestamp": "21:28"
+            },
+            {
+              "id": 28,
+              "timestamp": "23:59"
+            },
+            {
+              "id": 30,
+              "timestamp": "25:18"
+            },
+            {
+              "id": 32,
+              "timestamp": "26:52"
+            },
+            {
+              "id": 34,
+              "timestamp": "28:51"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 36,
+              "timestamp": "31:21"
+            },
+            {
+              "id": 38,
+              "timestamp": "33:05"
+            },
+            {
+              "id": 40,
+              "timestamp": "33:51"
+            },
+            {
+              "id": 52,
+              "timestamp": "49:50"
+            },
+            {
+              "id": 54,
+              "timestamp": "50:57"
+            },
+            {
+              "id": 56,
+              "timestamp": "64:08"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 44,
+              "timestamp": "39:53"
+            },
+            {
+              "id": 46,
+              "timestamp": "45:03"
+            },
+            {
+              "id": 48,
+              "timestamp": "48:21"
+            },
+            {
+              "id": 50,
+              "timestamp": "49:08"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 58,
+              "timestamp": "65:29"
+            },
+            {
+              "id": 60,
+              "timestamp": "71:37"
+            },
+            {
+              "id": 62,
+              "timestamp": "74:28"
+            },
+            {
+              "id": 64,
+              "timestamp": "80:11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "FINALIZAÇÃO",
+          "items": [
+            {
+              "id": 66,
+              "timestamp": "82:00"
+            },
+            {
+              "id": 68,
+              "timestamp": "82:20"
+            },
+            {
+              "id": 70,
+              "timestamp": "86:26"
+            },
+            {
+              "id": 72,
+              "timestamp": "94:21"
+            },
+            {
+              "id": 74,
+              "timestamp": "95:40"
+            },
+            {
+              "id": 76,
+              "timestamp": "95:46"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

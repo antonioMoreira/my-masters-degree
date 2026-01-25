@@ -1,0 +1,124 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "IDENTIFICAÇÃO",
+          "items": [
+            {
+              "id": 0,
+              "timestamp": "00:40"
+            }
+          ]
+        },
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 2,
+              "timestamp": "03:03"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 4,
+              "timestamp": "05:21"
+            },
+            {
+              "id": 8,
+              "timestamp": "07:08"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 6,
+              "timestamp": "05:43"
+            },
+            {
+              "id": 10,
+              "timestamp": "08:04"
+            },
+            {
+              "id": 12,
+              "timestamp": "10:29"
+            },
+            {
+              "id": 14,
+              "timestamp": "11:34"
+            },
+            {
+              "id": 16,
+              "timestamp": "13:07"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 18,
+              "timestamp": "16:05"
+            },
+            {
+              "id": 20,
+              "timestamp": "17:35"
+            },
+            {
+              "id": 22,
+              "timestamp": "20:37"
+            },
+            {
+              "id": 24,
+              "timestamp": "26:29"
+            },
+            {
+              "id": 26,
+              "timestamp": "27:18"
+            },
+            {
+              "id": 28,
+              "timestamp": "29:18"
+            },
+            {
+              "id": 36,
+              "timestamp": "51:48"
+            },
+            {
+              "id": 38,
+              "timestamp": "53:47"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 30,
+              "timestamp": "37:58"
+            },
+            {
+              "id": 32,
+              "timestamp": "40:12"
+            },
+            {
+              "id": 34,
+              "timestamp": "45:59"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

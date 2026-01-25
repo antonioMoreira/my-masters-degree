@@ -1,0 +1,213 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "IDENTIFICAÇÃO",
+          "items": [
+            {
+              "id": 0,
+              "timestamp": "00:20"
+            },
+            {
+              "id": 2,
+              "timestamp": "00:50"
+            }
+          ]
+        },
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 4,
+              "timestamp": "00:53"
+            },
+            {
+              "id": 6,
+              "timestamp": "01:08"
+            },
+            {
+              "id": 8,
+              "timestamp": "01:35"
+            },
+            {
+              "id": 10,
+              "timestamp": "02:50"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 12,
+              "timestamp": "02:56"
+            },
+            {
+              "id": 14,
+              "timestamp": "03:00"
+            },
+            {
+              "id": 16,
+              "timestamp": "03:04"
+            },
+            {
+              "id": 18,
+              "timestamp": "03:40"
+            },
+            {
+              "id": 20,
+              "timestamp": "04:38"
+            },
+            {
+              "id": 22,
+              "timestamp": "05:11"
+            },
+            {
+              "id": 24,
+              "timestamp": "09:39"
+            },
+            {
+              "id": 26,
+              "timestamp": "10:02"
+            },
+            {
+              "id": 28,
+              "timestamp": "11:03"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 30,
+              "timestamp": "12:12"
+            },
+            {
+              "id": 32,
+              "timestamp": "12:49"
+            },
+            {
+              "id": 34,
+              "timestamp": "12:58"
+            },
+            {
+              "id": 36,
+              "timestamp": "13:31"
+            },
+            {
+              "id": 38,
+              "timestamp": "20:04"
+            },
+            {
+              "id": 40,
+              "timestamp": "20:40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 42,
+              "timestamp": "21:23"
+            },
+            {
+              "id": 44,
+              "timestamp": "25:07"
+            },
+            {
+              "id": 46,
+              "timestamp": "29:50"
+            },
+            {
+              "id": 48,
+              "timestamp": "32:46"
+            },
+            {
+              "id": 50,
+              "timestamp": "34:08"
+            },
+            {
+              "id": 52,
+              "timestamp": "36:17"
+            },
+            {
+              "id": 54,
+              "timestamp": "37:27"
+            },
+            {
+              "id": 56,
+              "timestamp": "39:04"
+            },
+            {
+              "id": 58,
+              "timestamp": "41:31"
+            },
+            {
+              "id": 60,
+              "timestamp": "44:44"
+            },
+            {
+              "id": 62,
+              "timestamp": "46:59"
+            },
+            {
+              "id": 64,
+              "timestamp": "47:55"
+            },
+            {
+              "id": 66,
+              "timestamp": "48:43"
+            },
+            {
+              "id": 68,
+              "timestamp": "52:25"
+            },
+            {
+              "id": 70,
+              "timestamp": "55:46"
+            },
+            {
+              "id": 72,
+              "timestamp": "57:54"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "CONSIDERAÇÕES FINAIS",
+          "items": [
+            {
+              "id": 74,
+              "timestamp": "61:24"
+            },
+            {
+              "id": 76,
+              "timestamp": "62:30"
+            },
+            {
+              "id": 78,
+              "timestamp": "64:26"
+            },
+            {
+              "id": 80,
+              "timestamp": "65:12"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
