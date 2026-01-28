@@ -1,0 +1,11 @@
+Segmentation saved for audio_id=795 with interview_code=EBP007
+Segmentation saved for audio_id=791 with interview_code=EBP007
+Segmentation saved for audio_id=897 with interview_code=EBP007
+Segmentation saved for audio_id=498 with interview_code=GRS002
+Segmentation saved for audio_id=515 with interview_code=GRS002
+Segmentation saved for audio_id=425 with interview_code=LVP011
+Segmentation saved for audio_id=419 with interview_code=LVP011
+Joining interviewer codes Index(['MD006', 'IDA013'], dtype='object', name='speaker_code') into 'MD006_IDA013'
+Segmentation saved for audio_id=461 with interview_code=MD006_IDA013
+Joining interviewer codes Index(['MD006', 'IDA013'], dtype='object', name='speaker_code') into 'MD006_IDA013'
+Segmentation saved for audio_id=470 with interview_code=MD006_IDA013

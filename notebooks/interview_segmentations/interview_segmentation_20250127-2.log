@@ -1,0 +1,15 @@
+Segmentation saved for audio_id=484 with interview_code=EBP007
+Joining interviewer codes Index(['IDA013', 'MM057'], dtype='object', name='speaker_code') into 'IDA013_MM057'
+Segmentation saved for audio_id=475 with interview_code=IDA013_MM057
+Segmentation saved for audio_id=847 with interview_code=RDG022
+Joining interviewer codes Index(['LR061', 'VB123'], dtype='object', name='speaker_code') into 'LR061_VB123'
+Segmentation saved for audio_id=846 with interview_code=LR061_VB123
+Joining interviewer codes Index(['DEL009', 'GN019'], dtype='object', name='speaker_code') into 'DEL009_GN019'
+Segmentation saved for audio_id=752 with interview_code=DEL009_GN019
+Joining interviewer codes Index(['DEL009', 'TR085'], dtype='object', name='speaker_code') into 'DEL009_TR085'
+Segmentation saved for audio_id=394 with interview_code=DEL009_TR085
+Joining interviewer codes Index(['IDA013', 'TB074'], dtype='object', name='speaker_code') into 'IDA013_TB074'
+Segmentation saved for audio_id=476 with interview_code=IDA013_TB074
+Segmentation saved for audio_id=842 with interview_code=SA014
+Joining interviewer codes Index(['JB020', 'JOA093'], dtype='object', name='speaker_code') into 'JB020_JOA093'
+Segmentation saved for audio_id=758 with interview_code=JB020_JOA093
