@@ -82,6 +82,22 @@
               "timestamp": "17:16"
             },
             {
+              "id": 22,
+              "timestamp": "18:25"
+            },
+            {
+              "id": 24,
+              "timestamp": "19:11"
+            },
+            {
+              "id": 26,
+              "timestamp": "19:18"
+            },
+            {
+              "id": 28,
+              "timestamp": "20:53"
+            },
+            {
               "id": 30,
               "timestamp": "21:46"
             },
@@ -92,6 +108,10 @@
             {
               "id": 34,
               "timestamp": "21:59"
+            },
+            {
+              "id": 36,
+              "timestamp": "27:29"
             },
             {
               "id": 44,
@@ -118,26 +138,6 @@
         {
           "subtitle": "JUVENTUDE",
           "items": [
-            {
-              "id": 22,
-              "timestamp": "18:25"
-            },
-            {
-              "id": 24,
-              "timestamp": "19:11"
-            },
-            {
-              "id": 26,
-              "timestamp": "19:18"
-            },
-            {
-              "id": 28,
-              "timestamp": "20:53"
-            },
-            {
-              "id": 36,
-              "timestamp": "27:29"
-            },
             {
               "id": 38,
               "timestamp": "28:19"
@@ -224,7 +224,7 @@
       "title": "FINALIZAÇÃO",
       "subsections": [
         {
-          "subtitle": "ATUALIDADE E FUTURO",
+          "subtitle": "FINALIZAÇÃO",
           "items": [
             {
               "id": 90,

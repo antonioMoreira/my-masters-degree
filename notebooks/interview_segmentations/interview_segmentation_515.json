@@ -23,7 +23,26 @@
               "timestamp": "15:43"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 8,
+              "timestamp": "16:39"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
         {
           "subtitle": "JUVENTUDE",
           "items": [
@@ -76,24 +95,10 @@
       ]
     },
     {
-      "title": "DESENVOLVIMENTO",
-      "subsections": [
-        {
-          "subtitle": "TRABALHO/ COMÉRCIO",
-          "items": [
-            {
-              "id": 8,
-              "timestamp": "16:39"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "title": "FINALIZAÇÃO",
       "subsections": [
         {
-          "subtitle": "CONSIDERAÇÕES FINAIS",
+          "subtitle": "FINALIZAÇÃO",
           "items": [
             {
               "id": 32,

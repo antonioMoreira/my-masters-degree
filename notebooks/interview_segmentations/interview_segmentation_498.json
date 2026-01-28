@@ -1,0 +1,65 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "IDENTIFICAÇÃO",
+          "items": [
+            {
+              "id": 0,
+              "timestamp": "00:29"
+            },
+            {
+              "id": 2,
+              "timestamp": "01:03"
+            },
+            {
+              "id": 4,
+              "timestamp": "01:59"
+            }
+          ]
+        },
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 6,
+              "timestamp": "03:18"
+            }
+          ]
+        },
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 8,
+              "timestamp": "06:27"
+            },
+            {
+              "id": 10,
+              "timestamp": "15:58"
+            },
+            {
+              "id": 12,
+              "timestamp": "17:12"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 14,
+              "timestamp": "114:09"
+            },
+            {
+              "id": 16,
+              "timestamp": "131:51"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

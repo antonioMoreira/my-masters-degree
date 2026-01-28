@@ -89,6 +89,10 @@
               "timestamp": "24:35"
             },
             {
+              "id": 45,
+              "timestamp": "25:14"
+            },
+            {
               "id": 49,
               "timestamp": "25:56"
             },
@@ -116,6 +120,10 @@
             {
               "id": 37,
               "timestamp": "21:46"
+            },
+            {
+              "id": 47,
+              "timestamp": "25:45"
             },
             {
               "id": 53,
@@ -183,14 +191,6 @@
         {
           "subtitle": "TRABALHO/ COMÉRCIO",
           "items": [
-            {
-              "id": 45,
-              "timestamp": "25:14"
-            },
-            {
-              "id": 47,
-              "timestamp": "25:45"
-            },
             {
               "id": 51,
               "timestamp": "27:25"

@@ -1,0 +1,137 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "INFÂNCIA",
+          "items": [
+            {
+              "id": 1,
+              "timestamp": "06:35"
+            }
+          ]
+        },
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 3,
+              "timestamp": "23:45"
+            },
+            {
+              "id": 5,
+              "timestamp": "63:22"
+            },
+            {
+              "id": 7,
+              "timestamp": "75:24"
+            },
+            {
+              "id": 9,
+              "timestamp": "77:50"
+            },
+            {
+              "id": 11,
+              "timestamp": "77:59"
+            },
+            {
+              "id": 13,
+              "timestamp": "78:06"
+            },
+            {
+              "id": 15,
+              "timestamp": "78:16"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 17,
+              "timestamp": "81:06"
+            },
+            {
+              "id": 19,
+              "timestamp": "81:11"
+            },
+            {
+              "id": 23,
+              "timestamp": "93:04"
+            },
+            {
+              "id": 25,
+              "timestamp": "118:14"
+            }
+          ]
+        },
+        {
+          "subtitle": "FAMÍLIA",
+          "items": [
+            {
+              "id": 21,
+              "timestamp": "82:30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 27,
+              "timestamp": "146:31"
+            },
+            {
+              "id": 29,
+              "timestamp": "186:29"
+            },
+            {
+              "id": 31,
+              "timestamp": "193:07"
+            },
+            {
+              "id": 33,
+              "timestamp": "193:35"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "CONSIDERAÇÕES FINAIS",
+          "items": [
+            {
+              "id": 35,
+              "timestamp": "199:03"
+            },
+            {
+              "id": 37,
+              "timestamp": "200:29"
+            },
+            {
+              "id": 39,
+              "timestamp": "203:28"
+            },
+            {
+              "id": 41,
+              "timestamp": "203:58"
+            },
+            {
+              "id": 43,
+              "timestamp": "204:03"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

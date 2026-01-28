@@ -1,0 +1,103 @@
+{
+  "segments": [
+    {
+      "title": "INTRODUÇÃO",
+      "subsections": [
+        {
+          "subtitle": "ESCOLA",
+          "items": [
+            {
+              "id": 1,
+              "timestamp": "22:25"
+            },
+            {
+              "id": 3,
+              "timestamp": "24:47"
+            },
+            {
+              "id": 23,
+              "timestamp": "150:33"
+            },
+            {
+              "id": 25,
+              "timestamp": "150:42"
+            }
+          ]
+        },
+        {
+          "subtitle": "JUVENTUDE",
+          "items": [
+            {
+              "id": 13,
+              "timestamp": "45:37"
+            },
+            {
+              "id": 15,
+              "timestamp": "56:32"
+            },
+            {
+              "id": 17,
+              "timestamp": "56:43"
+            },
+            {
+              "id": 21,
+              "timestamp": "135:17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DESENVOLVIMENTO",
+      "subsections": [
+        {
+          "subtitle": "TRABALHO/ COMÉRCIO",
+          "items": [
+            {
+              "id": 5,
+              "timestamp": "35:48"
+            },
+            {
+              "id": 7,
+              "timestamp": "37:57"
+            },
+            {
+              "id": 9,
+              "timestamp": "40:19"
+            },
+            {
+              "id": 11,
+              "timestamp": "43:01"
+            },
+            {
+              "id": 19,
+              "timestamp": "117:15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FINALIZAÇÃO",
+      "subsections": [
+        {
+          "subtitle": "CONSIDERAÇÕES FINAIS",
+          "items": [
+            {
+              "id": 27,
+              "timestamp": "161:58"
+            },
+            {
+              "id": 29,
+              "timestamp": "163:38"
+            },
+            {
+              "id": 31,
+              "timestamp": "164:29"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
