@@ -293,16 +293,22 @@ def classify_questions(
                         item.timestamp,
                     )
                 except ValueError as e:
-                    rich.print(f"[yellow] Warning [/yellow]: {e} for item id={item.id}, title='{seg.title}', subtitle='{sub.subtitle}'")
-                    id2cls[item.id] = (
-                        ClassLabel(seg.title),
-                        ClassLabel(seg.title),
-                        item.timestamp,
-                    )
-                except ValueError as e:
+                    try:
+                        rich.print(f"[yellow] Warning [/yellow]: {e} for item id={item.id}, title='{seg.title}', subtitle='{sub.subtitle}'")
+                        id2cls[item.id] = (
+                            ClassLabel(seg.title),
+                            ClassLabel(seg.title),
+                            item.timestamp,
+                        )
+                    except ValueError as e:
+                        rich.print(f"[red] Error [/red]: {e} for item id={item.id}, title='{seg.title}', subtitle='{sub.subtitle}'")
+                        raise e
+                    except Exception as e:
+                        rich.print(f"[red] Error [/red]: {e} for item id={item.id}, title='{seg.title}', subtitle='{sub.subtitle}'")
+                        raise e
+                except Exception as e:
                     rich.print(f"[red] Error [/red]: {e} for item id={item.id}, title='{seg.title}', subtitle='{sub.subtitle}'")
                     raise e
-
     missing = set(inter_questions.index) - set(id2cls.keys())
     if missing:
         raise ValueError(f"Unclassified question ids: {sorted(missing)}")
