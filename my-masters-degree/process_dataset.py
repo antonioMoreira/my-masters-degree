@@ -3,6 +3,7 @@ from enum import Enum
 from typing import List
 
 import rich
+import numpy as np
 import pandas as pd
 from google import genai 
 from google.genai import types
@@ -319,3 +320,61 @@ def classify_questions(
     if level in (None, "subsection"):
         df["subsection"] = df.index.map(lambda i: id2cls[i][1])
     return df
+
+
+def _missing_ids_into_list(ids: List[int]) -> tuple[list[int], int]:
+    missing_ids = [i for i in range(ids[0], ids[-1] + 1) if i not in ids]
+    return missing_ids, len(missing_ids)
+
+
+def get_missing_ids(mupe_sample: pd.DataFrame, n_conssecutives_ids: int = 1) -> pd.DataFrame:
+    
+    missing_ids_result = pd.DataFrame(
+        mupe_sample["file_id"].apply(_missing_ids_into_list).tolist(),
+        columns=["missing_ids", "missing_count"],
+    )
+
+    missing_count_mask = missing_ids_result["missing_count"] > 0
+    missing_ids_result = missing_ids_result.loc[missing_count_mask]
+
+    consecutives_missing_ids_mask = missing_ids_result.apply(
+        lambda row: any(np.diff(row['missing_ids']) == n_conssecutives_ids), axis=1)
+    
+    return missing_ids_result.loc[consecutives_missing_ids_mask]
+
+
+def post_process_mupe_sample(mupe_sample: pd.DataFrame) -> pd.DataFrame:
+    """Drop all rows whose subsection is ClassLabel.IDENTIFICACAO."""
+    mupe_sample = mupe_sample.copy()
+    missing_ids = get_missing_ids(mupe_sample)
+    mupe_sample = mupe_sample.drop(index=missing_ids.index)
+    filtered = mupe_sample.loc[mupe_sample["subsection"] != ClassLabel.IDENTIFICACAO].copy()
+    del(missing_ids)
+    return filtered
+
+
+def get_group_mapping(mupe_sample: pd.DataFrame) -> dict:
+    file_id:int = mupe_sample['file_id'].iloc[0][-1] - 1
+    
+    gp_id = 1
+    group_map = {}
+    group = []
+    
+    for idx, row in mupe_sample.iterrows():
+        file_id_list:list[int] = row['file_id']
+        first_id = file_id_list[0]
+        last_id = file_id_list[-1]
+        if file_id+1 == first_id:
+            group.append(idx)
+            file_id = last_id
+        else:
+            file_id = last_id
+            if group:
+                group_map[gp_id] = group
+                gp_id += 1
+            group = [idx]
+
+    inverse_map = {
+        idx: gid for gid, idxs in group_map.items() for idx in idxs}
+    
+    return inverse_map
