@@ -43,7 +43,7 @@ custom_colors = [
 mupe_cmap = ListedColormap(custom_colors, name="MupeExcelColorMap")
 matplotlib.colormaps.register(name="MupeExcelColorMap", cmap=mupe_cmap, force=True)
 
-from process_dataset import (
+from my_masters_degree.process_dataset import (
     aggregate_sample_dialogues,
     classify_questions,
     get_questions_df,
@@ -59,7 +59,9 @@ def get_well_behaved_samples(mupe_train: pd.DataFrame, audio_ids: List[int]):
     itvw_codes_list = []
 
     for audio_id in audio_ids:
-        sample = mupe_train[mupe_train["audio_id"] == int(audio_id)].copy()
+        sample = cast(
+            pd.DataFrame, mupe_train.loc[mupe_train["audio_id"] == int(audio_id)].copy()
+        )
         join_code, interviewer_codes = get_interviewer_code(sample)
         itvw_codes_list.append([audio_id, join_code, interviewer_codes])
 
@@ -88,7 +90,10 @@ if __name__ == "__main__":
 
     file_name_re = re.compile(r"interview_segmentation_(?P<audio_id>\d+)\.json")
     for json_segmentation in INTERVIEW_SEGMENTATIONS_PATH.glob("interview_segmentation_*.json"):
-        file_id = int(file_name_re.match(json_segmentation.name).group("audio_id"))
+        file_name_result = file_name_re.match(json_segmentation.name)
+        if file_name_result is None:
+            continue
+        file_id = int(file_name_result.group("audio_id"))
         mupe_train_sample, missing_ids_sample, itvw_code = aggregate_sample_dialogues(mupe_train_df, audio_id=file_id)
         
         if file_id in itvw_codes_df["audio_id"].values:
@@ -126,5 +131,5 @@ if __name__ == "__main__":
         excel_base_name = "mupe_train_sample_{}.xlsx".format(file_id)
         excel_path = EXCEL_FILES_PATH / excel_base_name
 
-        mupe_train_sample_final.style.apply(highlight_group, axis=1).to_excel(excel_path, index=False)
-        rich.print(f"Saved processed sample to {excel_path}")
+        #mupe_train_sample_final.style.apply(highlight_group, axis=1).to_excel(excel_path, index=False)
+        # rich.print(f"Saved processed sample to {excel_path}")

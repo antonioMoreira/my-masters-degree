@@ -1,6 +1,6 @@
 import os
 from enum import Enum
-from typing import List
+from typing import List, cast
 
 import rich
 import numpy as np
@@ -49,7 +49,7 @@ def aggregate_sample_dialogues(mupe_df: pd.DataFrame, audio_id: int) -> tuple[pd
         - Sorted list of missing file_id counters.
         - The joined interviewer speaker_code.
     """
-    sample = mupe_df.loc[mupe_df["audio_id"] == audio_id].sort_values("start_time").copy()
+    sample = cast(pd.DataFrame, mupe_df[mupe_df["audio_id"] == audio_id]).sort_values("start_time").copy()
 
     if sample.empty:
         raise ValueError(f"No rows found for audio_id={audio_id}")
@@ -145,7 +145,7 @@ def get_interviewer_code(mupe_sample: pd.DataFrame) -> tuple[str, list[str]]:
         interviewer_codes = speaker_counts.index[1:]
         join_code:str = "_".join(interviewer_codes)
     else:
-        join_code:str = speaker_counts.index[-1]
+        join_code:str = str(speaker_counts.index[-1])
         interviewer_codes = [join_code]
 
     return join_code, list(interviewer_codes)
@@ -340,7 +340,7 @@ def get_missing_ids(mupe_sample: pd.DataFrame, n_conssecutives_ids: int = 1) -> 
     consecutives_missing_ids_mask = missing_ids_result.apply(
         lambda row: any(np.diff(row['missing_ids']) == n_conssecutives_ids), axis=1)
     
-    return missing_ids_result.loc[consecutives_missing_ids_mask]
+    return cast(pd.DataFrame, missing_ids_result.loc[consecutives_missing_ids_mask])
 
 
 def post_process_mupe_sample(mupe_sample: pd.DataFrame) -> pd.DataFrame:
@@ -350,7 +350,7 @@ def post_process_mupe_sample(mupe_sample: pd.DataFrame) -> pd.DataFrame:
     mupe_sample = mupe_sample.drop(index=missing_ids.index)
     filtered = mupe_sample.loc[mupe_sample["subsection"] != ClassLabel.IDENTIFICACAO].copy()
     del(missing_ids)
-    return filtered
+    return cast(pd.DataFrame, filtered)
 
 
 def get_group_mapping(mupe_sample: pd.DataFrame) -> dict:
