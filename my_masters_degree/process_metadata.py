@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from typing import List, Literal
+from typing import List, Literal, cast
 
 import pandas as pd
 from google import genai 
@@ -18,12 +18,16 @@ class GenderClassification(BaseModel):
     results: List[GenderItem]
 
 
+MUPE_METADATA_COLUMNS = [
+    'split', 'braz_id', 'mupe_code', 'interviewee_name',
+    'youtube_link', 'interviewer1', 'interviewer2', 'interviewer3', 'title',
+    'gender', 'birth_state', 'interviewee_bio'
+]
+
 def preprocess_metadata_dataset(df:pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
-    df = df[df['birth_country'] == 'Brasil']
-    df = df[['split', 'braz_id', 'mupe_code', 'interviewee_name',
-       'youtube_link', 'interviewer1', 'interviewer2', 'interviewer3', 'title',
-       'gender', 'birth_state', 'interviewee_bio']]
+    df = cast(pd.DataFrame, df.loc[df['birth_country'] == 'Brasil'])
+    df = cast(pd.DataFrame, df[MUPE_METADATA_COLUMNS])
     df = df.rename(columns={'braz_id': 'audio_id'})
     print(f"Number of rows with NA in 'audio_id': {df['audio_id'].isna().sum()}")
     df = df.dropna(subset=['audio_id'])

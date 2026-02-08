@@ -22,7 +22,7 @@ from IPython.display import Audio as ipyAudio
 
 DATASETS_PATH = Path("/home/antonio-moreira/Documents/my-masters-degree/notebooks/datasets/")
 MUPE_GIT_PATH = DATASETS_PATH / "coling-mupe-asr"
-PROCESSED_METADATA_PATH = Path("/home/antonio-moreira/Documents/my-masters-degree/notebooks/mupe_metadata_sp_gender_slice.csv")
+PROCESSED_METADATA_PATH = Path("/home/antonio-moreira/Documents/my-masters-degree/notebooks/mupe_metadata_sp_gender_slice_reviewed.csv")
 INTERVIEW_SEGMENTATIONS_PATH = Path("/home/antonio-moreira/Documents/my-masters-degree/notebooks/interview_segmentations")
 EXCEL_FILES_PATH = Path("/home/antonio-moreira/Documents/my-masters-degree/notebooks/excel_files/")
 
