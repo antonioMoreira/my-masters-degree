@@ -3,6 +3,7 @@ from pathlib import Path
 
 import pdfplumber
 import pandas as pd
+from typing import Literal
 
 def parse_interview_pdf(pdf_path: Path):
     """
@@ -26,7 +27,7 @@ def parse_interview_pdf(pdf_path: Path):
     p_counter = 0
     r_counter = 0
     
-    current_type = None # 'p' or 'r'
+    current_type: Literal['p', 'r'] | None = None # 'p' or 'r'
     current_buffer = [] # Holds the lines of text for the current block
     
     # Patterns to identify headers/footers to ignore
