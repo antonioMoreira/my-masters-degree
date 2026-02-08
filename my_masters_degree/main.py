@@ -70,7 +70,7 @@ def get_well_behaved_samples(mupe_train: pd.DataFrame, audio_ids: List[int]):
 
     return itvw_codes_df
 
-def highlight_group(row:pd.Series):
+def highlight_group(row:pd.Series, group_to_color: dict):
     color = group_to_color.get(row["group_id"], "#FFFFFF")
     return [f"background-color: {color}"] * len(row)
 
@@ -87,6 +87,8 @@ if __name__ == "__main__":
         mupe_train=mupe_train_df,
         audio_ids=mupe_metadata_sp_df['audio_id'].tolist()
     )
+
+    mupe_samples = []
 
     file_name_re = re.compile(r"interview_segmentation_(?P<audio_id>\d+)\.json")
     for json_segmentation in INTERVIEW_SEGMENTATIONS_PATH.glob("interview_segmentation_*.json"):
@@ -124,12 +126,18 @@ if __name__ == "__main__":
         )
 
         mupe_train_sample_final.dropna(subset=['group_id'], inplace=True)
+        mupe_samples.append(mupe_train_sample_final)
 
-        unique_groups = sorted(mupe_train_sample_final["group_id"].unique())
-        group_to_color = {g: to_hex(mupe_cmap(i)) for i, g in enumerate(unique_groups)}
+        # unique_groups = sorted(mupe_train_sample_final["group_id"].unique())
+        # group_to_color = {g: to_hex(mupe_cmap(i)) for i, g in enumerate(unique_groups)}
 
-        excel_base_name = "mupe_train_sample_{}.xlsx".format(file_id)
-        excel_path = EXCEL_FILES_PATH / excel_base_name
+        # excel_base_name = "mupe_train_sample_{}.xlsx".format(file_id)
+        # excel_path = EXCEL_FILES_PATH / excel_base_name
 
-        #mupe_train_sample_final.style.apply(highlight_group, axis=1).to_excel(excel_path, index=False)
+        # mupe_train_sample_final.style.apply(
+        #     lambda row: highlight_group(row, group_to_color), axis=1
+        # ).to_excel(excel_path, index=False)
         # rich.print(f"Saved processed sample to {excel_path}")
+    
+    mupe_samples_df = pd.concat(mupe_samples)
+    mupe_samples_df.to_csv(DATASETS_PATH.parent / "mupetalk_train.csv", index=False)

@@ -353,7 +353,7 @@ def post_process_mupe_sample(mupe_sample: pd.DataFrame) -> pd.DataFrame:
     return cast(pd.DataFrame, filtered)
 
 
-def get_group_mapping(mupe_sample: pd.DataFrame) -> dict:
+def get_group_mapping(mupe_sample: pd.DataFrame, min_len_group: int = 5) -> dict:
     file_id:int = mupe_sample['file_id'].iloc[0][-1] - 1
     
     gp_id = 1
@@ -369,7 +369,7 @@ def get_group_mapping(mupe_sample: pd.DataFrame) -> dict:
             file_id = last_id
         else:
             file_id = last_id
-            if group:
+            if len(group) >= min_len_group:
                 group_map[gp_id] = group
                 gp_id += 1
             group = [idx]
