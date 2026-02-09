@@ -2,7 +2,7 @@ import ast
 from typing import List
 
 import pandas as pd
-import pandera as pa
+import pandera.pandas as pa
 from pandera.typing import Series
 
 
@@ -18,8 +18,8 @@ def parse_list_str(v: str | List) -> List:
 
 
 class MupeTalkSchema(pa.DataFrameModel):
-    file_path: Series[object]
-    file_id: Series[object]
+    file_path: Series[List[str]]
+    file_id: Series[List[int]]
     speaker_code: Series[str]
     start_time: Series[float]
     end_time: Series[float]
@@ -42,3 +42,8 @@ def load_and_validate_mupetalk(df: pd.DataFrame) -> pd.DataFrame:
 def get_statistics(mupetalk_df: pd.DataFrame):
     pass
     
+
+if __name__ == "__main__":
+    df = pd.read_csv("/home/antonio-moreira/Documents/my-masters-degree/notebooks/mupetalk_train.csv")
+    validated_df = load_and_validate_mupetalk(df)
+    get_statistics(validated_df)
