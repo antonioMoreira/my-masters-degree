@@ -9,25 +9,34 @@ import numpy as np
 
 def get_speaker_dialogues(csv_path: str, speaker_code: str, num_dialogues: int = 5) -> List[Dict[str, Any]]:
     """
-    Reads the metadata CSV and extracts a specified number of dialogues
-    for a given speaker. A 'dialogue' is considered a unique 'group_id' for that speaker.
+    Reads the metadata CSV and extracts a specified number of dialogues (interviews)
+    for a given speaker.
     """
     df = pd.read_csv(csv_path)
     
-    # Find group_ids where the speaker participates
-    speaker_group_ids = df[df['speaker_code'] == speaker_code]['group_id'].unique()
+    # We want 5 distinct interviews for this speaker
+    speaker_interviews = df[df['speaker_code'] == speaker_code]['interview_id'].unique()
     
-    if len(speaker_group_ids) < num_dialogues:
-        raise ValueError(f"Speaker {speaker_code} participates in only {len(speaker_group_ids)} dialogues, but {num_dialogues} were requested.")
+    if len(speaker_interviews) < num_dialogues:
+        raise ValueError(f"Speaker {speaker_code} participates in only {len(speaker_interviews)} interviews, but {num_dialogues} were requested.")
     
-    selected_group_ids = speaker_group_ids[:num_dialogues]
+    selected_interview_ids = speaker_interviews[:num_dialogues]
     
     dialogues = []
-    for group_id in selected_group_ids:
-        group_df = df[df['group_id'] == group_id].sort_values(['group_id', 'start_time'])
+    for interview_id in selected_interview_ids:
+        interview_df = df[df['interview_id'] == interview_id].sort_values(['group_id', 'start_time'])
+        
+        # Group by group_id
+        groups = []
+        for group_id, group_df in interview_df.groupby('group_id'):
+            groups.append({
+                'group_id': int(group_id),
+                'turns': group_df.to_dict(orient='records')
+            })
+            
         dialogues.append({
-            'group_id': int(group_id),
-            'turns': group_df.to_dict(orient='records')
+            'interview_id': interview_id,
+            'groups': groups
         })
         
     return dialogues
@@ -83,43 +92,29 @@ def join_audio_segments(audio_bytes_list: List[bytes]) -> Tuple[np.ndarray, int]
     combined = np.concatenate(all_data)
     return combined, samplerate
 
-def save_sample(output_dir: str, dialogue_idx: int, audio_data: np.ndarray, samplerate: int, metadata: List[Dict[str, Any]]) -> str:
-    """
-    Saves audio and metadata for a dialogue sample.
-    """
-    os.makedirs(output_dir, exist_ok=True)
-    
-    audio_filename = f"sample_{dialogue_idx}.wav"
-    audio_path = os.path.join(output_dir, audio_filename)
-    sf.write(audio_path, audio_data, samplerate)
-    
-    meta_filename = f"sample_{dialogue_idx}.json"
-    meta_path = os.path.join(output_dir, meta_filename)
-    with open(meta_path, 'w', encoding='utf-8') as f:
-        json.dump(metadata, f, indent=2, ensure_ascii=False)
-        
-    return audio_path
+def parse_paths(fp: str) -> List[str]:
+    # Replace PosixPath string representation to standard python list of strings
+    if isinstance(fp, str):
+        fp = fp.replace("PosixPath('", "'").replace("')", "'")
+        return ast.literal_eval(fp)
+    return [fp]
 
 def main() -> None:
-    csv_path = 'notebooks/mupetalk_train.csv'
+    csv_path = 'notebooks/mupetalk_train_v2.csv'
     parquet_dir = 'notebooks/datasets/CORAA-MUPE'
     output_dir = 'my_masters_degree/samples'
-    # Using MA_HV229 as seen in the CSV head earlier
-    speaker_code = 'MA_HV229'
+    # Using EBP007 since it has 4 interviews
+    speaker_code = 'EBP007'
     
-    print(f"Extracting 5 dialogues for speaker {speaker_code}...")
-    dialogues = get_speaker_dialogues(csv_path, speaker_code, num_dialogues=5)
+    print(f"Extracting 4 interviews for speaker {speaker_code}...")
+    interviews = get_speaker_dialogues(csv_path, speaker_code, num_dialogues=4)
     
     all_needed_files = []
-    for d in dialogues:
-        for turn in d['turns']:
-            # Handle potential non-list strings if any, but CSV head showed "['path']"
-            fp = turn['file_path']
-            if isinstance(fp, str) and fp.startswith('['):
-                paths = ast.literal_eval(fp)
-            else:
-                paths = [fp]
-            all_needed_files.extend(paths)
+    for interview in interviews:
+        for group in interview['groups']:
+            for turn in group['turns']:
+                paths = parse_paths(turn['file_path'])
+                all_needed_files.extend(paths)
             
     unique_files = list(set(all_needed_files))
     print(f"Searching for {len(unique_files)} unique audio files in parquets...")
@@ -129,26 +124,56 @@ def main() -> None:
         missing = set(unique_files) - set(audio_map.keys())
         print(f"Warning: {len(missing)} files not found in parquets: {list(missing)[:5]}...")
     
-    for i, d in enumerate(dialogues):
-        print(f"Processing dialogue {i+1}/{len(dialogues)} (group_id: {d['group_id']})...")
-        dialogue_audio_bytes = []
-        for turn in d['turns']:
-            fp = turn['file_path']
-            if isinstance(fp, str) and fp.startswith('['):
-                paths = ast.literal_eval(fp)
-            else:
-                paths = [fp]
-                
-            for p in paths:
-                if p in audio_map:
-                    dialogue_audio_bytes.append(audio_map[p])
+    os.makedirs(output_dir, exist_ok=True)
+    
+    for i, interview in enumerate(interviews):
+        print(f"Processing interview {i+1}/{len(interviews)} (interview_id: {interview['interview_id']})...")
         
-        if dialogue_audio_bytes:
-            audio_data, sr = join_audio_segments(dialogue_audio_bytes)
-            saved_path = save_sample(output_dir, i, audio_data, sr, d['turns'])
-            print(f"Saved sample to {saved_path}")
-        else:
-            print(f"Skipping dialogue {i+1} as no audio was found.")
+        sample_dir = os.path.join(output_dir, f"sample_{i}")
+        os.makedirs(sample_dir, exist_ok=True)
+        
+        groups_dir = os.path.join(sample_dir, f"sample_{i}_groups")
+        os.makedirs(groups_dir, exist_ok=True)
+        
+        interview_audio_bytes = []
+        interview_metadata = []
+        
+        for group in interview['groups']:
+            group_audio_bytes = []
+            group_metadata = group['turns']
+            interview_metadata.extend(group['turns'])
+            
+            for turn in group['turns']:
+                paths = parse_paths(turn['file_path'])
+                for p in paths:
+                    if p in audio_map:
+                        group_audio_bytes.append(audio_map[p])
+                        interview_audio_bytes.append(audio_map[p])
+            
+            # Save group
+            if group_audio_bytes:
+                audio_data, sr = join_audio_segments(group_audio_bytes)
+                group_id = group['group_id']
+                
+                audio_path = os.path.join(groups_dir, f"sample_{i}_id{group_id}.wav")
+                sf.write(audio_path, audio_data, sr)
+                
+                meta_path = os.path.join(groups_dir, f"sample_{i}_id{group_id}.json")
+                with open(meta_path, 'w', encoding='utf-8') as f:
+                    json.dump(group_metadata, f, indent=2, ensure_ascii=False)
+        
+        # Save interview
+        if interview_audio_bytes:
+            audio_data, sr = join_audio_segments(interview_audio_bytes)
+            
+            audio_path = os.path.join(sample_dir, f"sample_{i}.wav")
+            sf.write(audio_path, audio_data, sr)
+            
+            meta_path = os.path.join(sample_dir, f"sample_{i}.json")
+            with open(meta_path, 'w', encoding='utf-8') as f:
+                json.dump(interview_metadata, f, indent=2, ensure_ascii=False)
+                
+        print(f"Saved interview sample {i} to {sample_dir}")
 
 if __name__ == "__main__":
     main()

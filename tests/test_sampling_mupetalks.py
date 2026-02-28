@@ -6,7 +6,7 @@ import io
 import json
 import numpy as np
 import soundfile as sf
-from my_masters_degree.sampling_mupetalks import get_speaker_dialogues, join_audio_segments, save_sample
+from my_masters_degree.sampling_mupetalks import get_speaker_dialogues, join_audio_segments
 
 @pytest.fixture
 def mock_csv_path():
@@ -15,7 +15,8 @@ def mock_csv_path():
         'speaker_code': ['SPK1', 'SPK1', 'SPK1', 'SPK1', 'SPK1', 'SPK1', 'SPK2'],
         'group_id': [1, 1, 2, 2, 3, 4, 5],
         'start_time': [0, 5, 10, 15, 20, 25, 30],
-        'original_text': ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7']
+        'original_text': ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
+        'interview_id': ['I1', 'I1', 'I1', 'I1', 'I2', 'I3', 'I4']
     }
     df = pd.DataFrame(data)
     
@@ -30,8 +31,9 @@ def mock_csv_path():
 
 def test_get_speaker_dialogues(mock_csv_path):
     dialogues = get_speaker_dialogues(mock_csv_path, 'SPK1', num_dialogues=3)
-    assert len(dialogues) == 3
-    assert dialogues[0]['group_id'] == 1
+    assert len(dialogues) == 3 # I1, I2, I3
+    assert dialogues[0]['interview_id'] == 'I1'
+    assert len(dialogues[0]['groups']) == 2 # group_id 1 and 2
     
     with pytest.raises(ValueError):
         get_speaker_dialogues(mock_csv_path, 'SPK1', num_dialogues=5)
@@ -51,20 +53,3 @@ def test_join_audio_segments():
     assert out_sr == sr
     assert np.allclose(combined[:sr], 0, atol=1e-4)
     assert np.allclose(combined[sr:], 0.5, atol=1e-4)
-
-def test_save_sample():
-    with tempfile.TemporaryDirectory() as tmp_dir:
-        sr = 16000
-        audio_data = np.zeros(sr)
-        metadata = [{'text': 'Hello'}]
-        
-        audio_path = save_sample(tmp_dir, 0, audio_data, sr, metadata)
-        
-        assert os.path.exists(audio_path)
-        assert audio_path.endswith('sample_0.wav')
-        
-        meta_path = os.path.join(tmp_dir, 'sample_0.json')
-        assert os.path.exists(meta_path)
-        with open(meta_path, 'r') as f:
-            saved_meta = json.load(f)
-        assert saved_meta == metadata
