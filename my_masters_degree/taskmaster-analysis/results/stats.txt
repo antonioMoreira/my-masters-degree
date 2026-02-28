@@ -1,0 +1,10 @@
+Taskmaster-1 (2019) EDA Results
+==============================
+Total Dialogues: 13215
+Mean Turns per Dialogue: 22.93
+Median Turns per Dialogue: 21.00
+
+Speaker Distribution:
+ASSISTANT    156971
+USER         146040
+unknown          55

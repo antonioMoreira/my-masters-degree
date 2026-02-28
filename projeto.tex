@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+}
+
+	itle{	extbf{Adaptação do Dataset MuPe para Especificações do DailyTalk}}
+\author{Estudo de Projeto de Mestrado}
+\date{	oday}
+
+\begin{document}
+
+\maketitle
+
+\section{Resumo}
+Este documento apresenta um estudo detalhado do projeto de pesquisa focado na adaptação do dataset MuPe (Multimodal Portuguese Corpus) para atender às especificações do paper DailyTalk. O objetivo final é viabilizar o treinamento de um modelo Text-to-Speech (TTS) capaz de capturar características conversacionais na língua portuguesa. O projeto utiliza técnicas avançadas de engenharia de dados e Modelos de Linguagem Grande (LLMs) para segmentação e estruturação semântica dos diálogos.
+
+\section{1. Introdução}
+A síntese de fala conversacional é um desafio em aberto, especialmente para a língua portuguesa. O dataset MuPe oferece um rico acervo de entrevistas, mas sua estrutura bruta não é imediatamente adequada para o treinamento de modelos de TTS modernos como os propostos no DailyTalk. Este projeto visa preencher essa lacuna criando um pipeline robusto de transformação de dados.
+
+\section{2. Objetivos}
+Os principais objetivos do projeto são:
+\begin{itemize}
+    \item 	extbf{Filtragem de Metadados:} Seleção de subgrupos específicos de falantes (foco em nascidos na capital de São Paulo) para garantir consistência prosódica.
+    \item 	extbf{Anonimização:} Remoção automática de segmentos introdutórios sensíveis ("Identificação") para proteger a privacidade dos entrevistados.
+    \item 	extbf{Reconstrução de Diálogos:} Concatenação de segmentos de áudio fragmentados em diálogos coesos e naturais.
+    \item 	extbf{Padronização:} Formatação rigorosa do dataset final para espelhar as especificações do DailyTalk.
+\end{itemize}
+
+\section{3. Metodologia e Implementação}
+
+A arquitetura do projeto é modular, dividida em pré-processamento de metadados, segmentação semântica e pós-processamento de áudio/texto.
+
+\subsection{3.1 Filtragem e Enriquecimento de Metadados}
+O script 	exttt{process\_metadata.py} é responsável pela seleção inicial dos dados. Ele processa arquivos brutos (	exttt{mupe\_metadados...csv}), filtrando entrevistados nascidos no Brasil e, especificamente, no estado de São Paulo. Além disso, utiliza-se a API do Google Gemini para classificar o gênero dos entrevistados com base em seus nomes, enriquecendo os metadados para análises futuras.
+
+\subsection{3.2 Processamento de Dataset e Segmentação com LLM}
+O núcleo do processamento reside em 	exttt{process\_dataset.py} e é orquestrado por 	exttt{main.py}. As etapas incluem:
+
+\begin{enumerate}
+    \item 	extbf{Agregação de Turnos:} A função 	exttt{aggregate\_sample\_dialogues} funde "utterances" (falas) contíguas do mesmo locutor, reconstruindo o fluxo natural da fala e calculando a duração total dos blocos.
+    \item 	extbf{Identificação de Interlocutores:} Lógica para identificar e unificar códigos de entrevistadores (ex: 	exttt{spk\_0}, 	exttt{spk\_1}) quando há múltiplos entrevistadores na mesma sessão.
+    \item 	extbf{Segmentação Semântica (Gemini):} A função 	exttt{split\_interview\_questions} utiliza o modelo Gemini (via Vertex AI) para analisar o texto transcrito das perguntas dos entrevistadores. O modelo mapeia cada pergunta a uma seção e subseção do roteiro oficial (	exttt{roteiro\_entrevista.md}), como "INFÂNCIA", "ESCOLA" ou "TRABALHO".
+    \item 	extbf{Classificação:} Com base na saída do LLM, cada segmento de áudio é rotulado com sua respectiva seção temática.
+\end{enumerate}
+
+\subsection{3.3 Pós-processamento e Validação}
+O script 	exttt{postprocess\_dataset.py} e funções auxiliares garantem a qualidade final:
+\begin{itemize}
+    \item 	extbf{Anonimização:} Segmentos classificados como "IDENTIFICAÇÃO" são removidos automaticamente.
+    \item 	extbf{Agrupamento:} A função 	exttt{get\_group\_mapping} organiza os segmentos em grupos conversacionais lógicos.
+    \item 	extbf{Validação de Esquema:} Uso da biblioteca 	exttt{Pandera} para garantir que o DataFrame final (	exttt{mupetalk\_train.csv}) cumpra os tipos de dados e formatos esperados.
+\end{itemize}
+
+\section{4. Estrutura do Projeto}
+O projeto segue uma estrutura organizada:
+\begin{itemize}
+    \item 	extbf{	exttt{conductor/}}: Contém a documentação do produto, especificações técnicas (	exttt{tech-stack.md}) e planos de execução (	exttt{tracks/}).
+    \item 	extbf{	exttt{my\_masters\_degree/}}: Código fonte Python com a lógica de negócio.
+    \item 	extbf{	exttt{notebooks/}}: Área de exploração de dados, contendo os datasets intermediários, logs de segmentação (	exttt{interview\_segmentations/}) e o arquivo de saída final.
+\end{itemize}
+
+\section{5. Resultados Atuais}
+O pipeline está funcional e gerando resultados. Arquivos JSON na pasta 	exttt{notebooks/interview\_segmentations/} indicam que a segmentação via LLM foi executada com sucesso para múltiplos IDs de áudio. O arquivo 	exttt{mupetalk\_train.csv} representa o dataset consolidado pronto para as etapas seguintes de treinamento do modelo TTS. A integração com o 	exttt{rich} fornece logs detalhados do processo, e a validação de dados garante a integridade da saída.
+
+\section{Conclusão}
+O projeto demonstra uma aplicação eficaz de LLMs para tarefas de estruturação de dados não supervisionadas (ou semi-supervisionadas), transformando um corpus bruto em um dataset de alta qualidade para pesquisa em síntese de fala.
+
+\end{document}
