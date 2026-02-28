@@ -1,9 +1,9 @@
 # Implementation Plan: Obtaining samples from the mupetalks.csv dataset
 
-## Phase 1: Project Setup
-- [ ] Task: Create test file `tests/test_sampling_mupetalks.py` with basic setup.
-- [ ] Task: Create script stub `my_masters_degree/sampling_mupetalks.py`.
-- [ ] Task: Conductor - User Manual Verification 'Project Setup' (Protocol in workflow.md)
+## Phase 1: Project Setup [checkpoint: b6ba4ca]
+- [x] Task: Create test file `tests/test_sampling_mupetalks.py` with basic setup. f1953ab
+- [x] Task: Create script stub `my_masters_degree/sampling_mupetalks.py`. f1953ab
+- [x] Task: Conductor - User Manual Verification 'Project Setup' (Protocol in workflow.md) b6ba4ca
 
 ## Phase 2: Metadata Extraction (TDD)
 - [ ] Task: Write failing tests for reading CSV (`notebooks/mupetalk_train.csv`) and filtering 5 dialogues of one speaker.
