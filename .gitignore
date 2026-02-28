@@ -11,3 +11,8 @@ wheels/
 
 notebooks/datasets
 coling-mupe-asr
+
+# Generated samples and audio files
+my_masters_degree/samples/
+*.wav
+test_pyav.py
