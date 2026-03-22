@@ -163,15 +163,15 @@ def main() -> None:
                     json.dump(group_metadata, f, indent=2, ensure_ascii=False)
         
         # Save interview
-        if interview_audio_bytes:
-            audio_data, sr = join_audio_segments(interview_audio_bytes)
+        # if interview_audio_bytes:
+        #     audio_data, sr = join_audio_segments(interview_audio_bytes)
             
-            audio_path = os.path.join(sample_dir, f"sample_{i}.wav")
-            sf.write(audio_path, audio_data, sr)
+        #     audio_path = os.path.join(sample_dir, f"sample_{i}.wav")
+        #     sf.write(audio_path, audio_data, sr)
             
-            meta_path = os.path.join(sample_dir, f"sample_{i}.json")
-            with open(meta_path, 'w', encoding='utf-8') as f:
-                json.dump(interview_metadata, f, indent=2, ensure_ascii=False)
+        #     meta_path = os.path.join(sample_dir, f"sample_{i}.json")
+        #     with open(meta_path, 'w', encoding='utf-8') as f:
+        #         json.dump(interview_metadata, f, indent=2, ensure_ascii=False)
                 
         print(f"Saved interview sample {i} to {sample_dir}")
 
